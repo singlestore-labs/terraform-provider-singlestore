@@ -16,14 +16,6 @@ func MaybeString(s types.String) *string {
 	return Ptr(s.ValueString())
 }
 
-func MaybeFloat32(f types.Float32) *float32 {
-	if f.IsNull() || f.IsUnknown() {
-		return nil
-	}
-
-	return Ptr(f.ValueFloat32())
-}
-
 func ToString(s types.String) string {
 	return s.ValueString()
 }
